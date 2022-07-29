@@ -1,7 +1,91 @@
+:root{
+    --primary-color:#10b981;
+   
+}
+
+main {
+    display: block;
+}
+
 .container {
-display: flex;
-flex-direction: column;
-width: 50vw;
+margin: 4rem quto 7rem;
+text-align: center;
+
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.description {
+    font-size: larger;
+    margin: 1rem;
+}
+
+.input-label {
+    display: block;
+    font-size: large;
+    padding-bottom: 0.5rem;
+}
+
+.input {
+    padding: 0.6rem 1rem;
+    margin:1rem;
+    border:2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    max-width: 258px;
+}
+
+#check-btn {
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    font-size: large;
+    display: block;
+    margin: auto;
+
+}
+#error-message {
+    display: block;
+    font-size: larger;
+    margin: 1rem 0 0;
+}
+
+.change-table caption {
+    font-size: large;
+}
+
+.change-table {
+    width: 50%;
+    text-align: justify;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th , td {
+    border: 2px solid var(--primary-color);
+    border-collapse: collapse;
+    padding: 0.4rem;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: large;
+    text-align: center;
+}
 
 
+.footer-list {
+    margin: 1rem;
+}
+
+a , li {
+    display: inline;
+    color: var(--primary-color);
+
+}
+a {
+    text-decoration: none;
 }

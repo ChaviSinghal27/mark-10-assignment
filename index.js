@@ -8,7 +8,9 @@ const noOfNotes = document.querySelectorAll(".no-of-notes");
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 checkButton.addEventListener("click",function validateBillAmountAndCashAmount(){
-message.style.Display = "none";
+
+hideMessage();
+
  if (billAmount.value > 0) {
 
     if (cashGiven.value >= billAmount.value) {
@@ -16,7 +18,7 @@ message.style.Display = "none";
         const amountToBeReturned = cashGiven.value - billAmount.value;
 
         calculateChange(amountToBeReturned);
-
+        
 
     } else {
             showMessage("Cash Amount should be atleast  equal to Bill Amount");
@@ -30,6 +32,17 @@ message.style.Display = "none";
 
 });
 
+
+
+function showMessage(msg) {
+    message.style.Display = "block";
+    message.innerText = msg;
+}
+function hideMessage() {
+    message.style.Display = "none" ;
+}
+
+
 function calculateChange(amountToBeReturned) {
     for ( var i = 0; i < availableNotes.length; i++) {
         const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
@@ -39,11 +52,4 @@ function calculateChange(amountToBeReturned) {
    
 
 }
-
-
-function showMessage(msg) {
-    message.display.style = "block";
-    message.innerText = msg;
-}
-
 
